@@ -6,7 +6,7 @@ import MainFooter from './components/Footer/MainFooter.vue'
 
 <template>
   <header>
-    <HelloWorld />
+    <MainHeader />
   </header>
 
   <main>
@@ -18,6 +18,12 @@ import MainFooter from './components/Footer/MainFooter.vue'
   </footer>
 </template>
 
-<style scoped>
-
+<style scoped lang="scss">
+main,
+footer,
+header {
+  max-width: 70vw;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
 </style>
