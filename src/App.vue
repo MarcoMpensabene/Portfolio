@@ -5,25 +5,41 @@ import MainFooter from './components/Footer/MainFooter.vue'
 </script>
 
 <template>
-  <header>
-    <MainHeader />
-  </header>
+  <div class="layout-container">
+    <div class="sidebar">
+      <header>
+        <MainHeader />
+      </header>
+      <footer>
+        <MainFooter />
+      </footer>
+    </div>
 
-  <main>
-    <MainContent />
-  </main>
+    <main class="main-content">
+      <MainContent />
+    </main>
+  </div>
 
-  <footer>
-    <MainFooter />
-  </footer>
 </template>
 
 <style scoped lang="scss">
-main,
-footer,
-header {
-  max-width: 70vw;
-  margin: 0 auto;
-  margin-bottom: 3rem;
+.layout-container {
+  display: flex;
+  min-height: 100vh; // Almeno l'altezza della viewport
+
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25%; // Definisce la larghezza per header e footer
+  background-color: #f0f0f0; // Colore di sfondo per differenziare
+
+}
+
+.main-content {
+  width: 75%; // Definisce la larghezza per il main content
+  background-color: #ffffff; // Colore di sfondo per il main
 }
 </style>
