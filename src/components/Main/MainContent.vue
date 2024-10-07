@@ -77,7 +77,7 @@ export default {
       </thead>
       <tbody>
         <tr v-for="repo in paginatedRepos" :key="repo.id">
-          <td>{{ repo.name }}</td>
+          <td class="repo-name">{{ repo.name }}</td>
           <td><a :href="repo.html_url" target="_blank">Visita</a></td>
         </tr>
       </tbody>
@@ -94,44 +94,118 @@ export default {
 <style scoped lang="scss">
 .main-wrapper {
   height: 100%;
-  background-color: gainsboro;
+  background-color: #f7f7f7;
+  /* Light background for contrast */
+  font-family: 'Roboto', sans-serif;
+  /* Modern font */
+  padding: 2rem;
 }
 
-.description {
-  text-align: center;
-  margin-bottom: 3rem;
-  font-size: larger;
-  color: black;
-}
-
+.description,
 .github {
   text-align: center;
-  color: black;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for depth */
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+
+.repo-name {
+  text-transform: uppercase;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+}
+
+thead {
+  background-color: #2c3e50;
+  /* Dark header background */
+  color: white;
+  /* White text for contrast */
 }
 
 th,
 td {
-  padding: 0.75rem;
+  padding: 1rem;
   text-align: left;
-  border: 1px solid black;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr {
+  transition: background-color 0.2s ease-in-out;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+  /* Soft hover effect */
+}
+
+th {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+td a {
+  text-decoration: none;
+  color: #3498db;
+  /* Link color */
+  font-weight: bold;
+}
+
+td a:hover {
+  color: #2980b9;
+  /* Darker color on hover */
 }
 
 .pagination {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 button {
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   margin: 0 0.5rem;
+  background-color: #3498db;
+  /* Primary button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  /* Darker hover effect */
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  /* Disabled button */
+  cursor: not-allowed;
+}
+
+span {
+  font-size: 1rem;
+  color: #2c3e50;
 }
 </style>
