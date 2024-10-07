@@ -22,7 +22,7 @@ import MainFooter from './components/Footer/MainFooter.vue'
 
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 .layout-container {
   display: flex;
   min-height: 100vh; // Almeno l'altezza della viewport
@@ -33,7 +33,8 @@ import MainFooter from './components/Footer/MainFooter.vue'
   display: flex;
   flex-direction: column;
   width: 25%; // Definisce la larghezza per header e footer
-  background-color: #f0f0f0; // Colore di sfondo per differenziare
+  background-image: url("https://i.pinimg.com/1200x/84/da/14/84da14ed4cd64e9995650e9a7738cecc.jpg"); // Colore di sfondo per differenziare
+  justify-content: space-between;
 
 }
 

@@ -15,9 +15,8 @@
 .header {
   text-align: center;
   padding: 2rem 0;
-  background-color: #f7f7f7;
+  background-image: url("https://i.pinimg.com/1200x/84/da/14/84da14ed4cd64e9995650e9a7738cecc.jpg");
   /* Light background */
-  border-bottom: 2px solid #3498db;
   /* Professional accent color */
 }
 

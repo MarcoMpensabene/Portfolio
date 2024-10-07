@@ -94,7 +94,7 @@ export default {
 <style scoped lang="scss">
 .main-wrapper {
   height: 100%;
-  background-color: #f7f7f7;
+  background-image: url("https://i.pinimg.com/1200x/84/da/14/84da14ed4cd64e9995650e9a7738cecc.jpg");
   /* Light background for contrast */
   font-family: 'Roboto', sans-serif;
   /* Modern font */
