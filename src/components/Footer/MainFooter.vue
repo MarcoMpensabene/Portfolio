@@ -11,23 +11,9 @@ export default {
           name: "Linkedin",
           link: "https://www.linkedin.com/in/marco-maria-pensabene-845a00325/"
         },
-        {
-          name: "ProfessionalEmail",
-          link: "marcompensabene@gmail.com"
-        },
-        {
-          name: "TelephoneNumber",
-          link: "+39 3516860837"
-        }
       ]
     }
   },
-  methods: {
-    formatLinkText(linkName) {
-      return linkName === "ProfessionalEmail" ? "Email" :
-        linkName === "TelephoneNumber" ? "Call Me" : linkName;
-    }
-  }
 }
 
 </script>
