@@ -14,18 +14,28 @@
 <style scoped lang="scss">
 .header {
   text-align: center;
+  padding: 2rem 0;
+  background-color: #f7f7f7;
+  /* Light background */
+  border-bottom: 2px solid #3498db;
+  /* Professional accent color */
+}
 
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  /* Darker professional color */
+  margin-bottom: 0.5rem;
+}
 
-  h1 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-style: oblique;
-    color: rgb(180, 14, 202);
-  }
-
-  h3 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-style: oblique;
-    color: rgb(180, 14, 202);
-  }
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #3498db;
+  /* Professional blue accent for job title */
+  margin-top: 0;
 }
 </style>

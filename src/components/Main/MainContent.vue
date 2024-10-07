@@ -67,18 +67,18 @@ export default {
     <div class="github">
       Here I will post all my GitHub projects and information about me.
     </div>
-    <h2>I miei progetti GitHub</h2>
+    <h2>My GitHub Projects</h2>
     <table>
       <thead>
         <tr>
-          <th>Nome Progetto</th>
+          <th>Projects Name</th>
           <th>Link</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="repo in paginatedRepos" :key="repo.id">
           <td class="repo-name">{{ repo.name }}</td>
-          <td><a :href="repo.html_url" target="_blank">Visita</a></td>
+          <td><a :href="repo.html_url" target="_blank">Visit</a></td>
         </tr>
       </tbody>
     </table>
@@ -106,7 +106,9 @@ export default {
   text-align: center;
   color: #333;
   margin-bottom: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 h2 {

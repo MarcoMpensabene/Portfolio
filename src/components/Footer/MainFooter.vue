@@ -2,25 +2,32 @@
 export default {
   data() {
     return {
-      personalLinks: [{
-        name: "GitHub",
-        link: "https://github.com/MarcoMpensabene"
-      },
-      {
-        name: "Linkedin",
-        link: "https://www.linkedin.com/in/marco-maria-pensabene-845a00325/"
-      },
-      {
-        name: "ProfessionalEmail",
-        link: "marcompensabene@gmail.com"
-      },
-      {
-        name: "TelephoneNumber",
-        link: "+39 3516860837"
-      }
+      personalLinks: [
+        {
+          name: "GitHub",
+          link: "https://github.com/MarcoMpensabene"
+        },
+        {
+          name: "Linkedin",
+          link: "https://www.linkedin.com/in/marco-maria-pensabene-845a00325/"
+        },
+        {
+          name: "ProfessionalEmail",
+          link: "marcompensabene@gmail.com"
+        },
+        {
+          name: "TelephoneNumber",
+          link: "+39 3516860837"
+        }
       ]
     }
   },
+  methods: {
+    formatLinkText(linkName) {
+      return linkName === "ProfessionalEmail" ? "Email" :
+        linkName === "TelephoneNumber" ? "Call Me" : linkName;
+    }
+  }
 }
 
 </script>
@@ -41,34 +48,50 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
-  padding: 20px;
+  background-color: #2c3e50;
+  padding: 40px;
   text-align: center;
-
-  h1 {
-    color: aqua;
-    margin-bottom: 2rem;
-  }
+  color: white;
 }
 
-.footer a {
-  color: #007bff;
-  text-decoration: none;
+h1 {
+  color: #3498db;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-
-.social-links a {
-  margin: 0 15px;
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .social-links {
   margin-bottom: 15px;
 }
 
-.cta-button {
-  background-color: #007bff;
-  color: #fff;
+.footer a {
+  color: #ecf0f1;
+  font-size: 1.2rem;
+  font-weight: 500;
   padding: 10px 20px;
-  text-decoration: none;
+  background-color: #3498db;
   border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.footer a:hover {
+  background-color: #2980b9;
+}
+
+.phone-link {
+  background-color: #e67e22;
+}
+
+.phone-link:hover {
+  background-color: #d35400;
 }
 </style>

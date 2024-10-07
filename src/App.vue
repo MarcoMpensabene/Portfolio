@@ -32,7 +32,6 @@ import MainFooter from './components/Footer/MainFooter.vue'
 .sidebar {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 25%; // Definisce la larghezza per header e footer
   background-color: #f0f0f0; // Colore di sfondo per differenziare
 
